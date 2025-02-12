@@ -182,10 +182,21 @@ function init() {
     renderComments()
 }
 
-function addComment() {
-    books.forEach((book, index) => {
+function addComment(index) {
+    
         let commentsInputRef = document.getElementById(`comment_input_${index}`);
-        console.log(commentsInputRef.value);
-    })
-   
-}
+        let commentsNameRef = document.getElementById(`commentName_input_${index}`)
+        if (commentsInputRef.value == "" || commentsNameRef.value == "") {
+            alert('bitte beide Felder ausfüllen');
+        }
+        else {
+            books[index].comments.push({ name: commentsNameRef.value, comment: commentsInputRef.value });
+            renderComments();
+            commentsInputRef.value = "";
+            commentsNameRef.value = ""; 
+        }
+    }
+
+    function addLike() {
+    
+    }

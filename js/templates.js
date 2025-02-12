@@ -8,17 +8,18 @@ function getBooksTemplate(book, index){
     <p><b>Preis: </b>${book.price} €</p>
     <p><b>Veröffentlicht: </b>${book.publishedYear}</p>
     <p><b>Genre: </b>${book.genre}</p>
-    <div id="comments_container_${index}">
     <h3>Kommentare</h3>
-    <input id="comment_input_${index}"  placeholder="Kommentar"></input><input id="commentName_input_${index}"  placeholder="Dein Name"></input><button onclick="addComment()">kommentieren</button>
+    <input id="comment_input_${index}"  placeholder="Kommentar"></input><input id="commentName_input_${index}"  placeholder="Dein Name"></input><button onclick="addComment(${index})">kommentieren</button>
+    <div id="comments_container_${index}">
+    
     </div>
     </div>
     `};
 
     function getCommentsTemplate(comment){
         return `
-        <p><b>Name:</b> ${comment.name};
-        <p><b>Kommentar:</b> ${comment.comment}
+        <p><b>Name:</b> ${comment.name}</p>
+        <p><b>Kommentar:</b> ${comment.comment}</p>
 
         `
 
