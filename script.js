@@ -177,7 +177,8 @@ let books = [
 
 let bookList = document.getElementById('booklist');
 
+function init() {
+    renderBooklist()
+    renderComments()
+}
 
-bookList.innerHTML = `
-<h1>Book Store</h1>
-<p>${books}</p>`;
