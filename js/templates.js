@@ -10,6 +10,7 @@ function getBooksTemplate(book, index){
     <p><b>Genre: </b>${book.genre}</p>
     <div id="comments_container_${index}">
     <h3>Kommentare</h3>
+    <input></input>
     </div>
     </div>
     `};
