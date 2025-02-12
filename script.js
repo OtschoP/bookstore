@@ -182,3 +182,10 @@ function init() {
     renderComments()
 }
 
+function addComment() {
+    books.forEach((book, index) => {
+        let commentsInputRef = document.getElementById(`comment_input_${index}`);
+        console.log(commentsInputRef.value);
+    })
+   
+}
