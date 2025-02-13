@@ -4,7 +4,7 @@ function getBooksTemplate(book, index){
     <div class="book">
     <h2>${book.name}</h2>
     <p><b>Autor:</b> ${book.author}</p>
-    <p class="likes"><b>Likes: </b>${book.likes}</p><button>like</button>
+    <p id="likes_${index}"><b>Likes: </b>${book.likes}</p><button onclick="toggleLike(${index})">like</button>
     <p><b>Preis: </b>${book.price} €</p>
     <p><b>Veröffentlicht: </b>${book.publishedYear}</p>
     <p><b>Genre: </b>${book.genre}</p>
@@ -21,9 +21,12 @@ function getBooksTemplate(book, index){
         return `
         <p><b>Name:</b> ${comment.name}</p>
         <p><b>Kommentar:</b> ${comment.comment}</p>
-
         `
+    };
 
-
+    function getLikesTemplate(like){
+        return `
+        <p id="likes_${index}"><b>Likes: </b>${like.likes}</p>
+        <button onclick="toggleLike(${index})">like</button>
+        `
     }
-;
