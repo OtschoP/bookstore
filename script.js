@@ -184,7 +184,7 @@ function init() {
 function renderAll() {
     renderBooklist();
     renderComments();
-    //renderLikes();
+    renderLikes();
 }
 
 function addComment(index) {
@@ -204,15 +204,15 @@ function addComment(index) {
 
 function toggleLike(index) {
     let isLiked = books[index].liked;
-
     if (isLiked == true) {
         books[index].likes--;
         books[index].liked = false;
+
     }
     else {
         books[index].likes++
         books[index].liked = true;
     }
 
-    renderLikes();
+    renderAll();  
 }

@@ -22,7 +22,7 @@ function renderLikes() {
     books.forEach((book, index) => {
     let likesRef = document.getElementById(`likes_${index}`);
     likesRef.innerHTML = "";
-    likesRef.innerText = book.likes;  
+    likesRef.innerText = book.likes;
     })
 }
 
