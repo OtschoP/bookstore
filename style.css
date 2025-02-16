@@ -1,0 +1,77 @@
+
+body {
+    background-color: rgb(94, 89, 89);
+
+}
+
+.banner {
+    height:100px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.banner img{
+    width: 100%; /* Skaliert das Bild auf die gesamte Breite */
+    height: 100%; /* Skaliert es, um die Höhe des Containers zu füllen */
+    object-fit: cover; /* Schneidet das Bild so zu, dass es die Fläche vollständig ausfüllt */
+    object-position: center; /* Zeigt die Mitte des Bildes an */
+}
+
+.margin-left{
+    margin-left: 10px;
+}
+
+.books_container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:antiquewhite;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+}
+
+.book {
+    max-width: 1000px;
+    background-color: brown;
+    border: brown solid 3px;
+    margin-top: 10px;
+}
+
+.like_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+like_button_class{
+    width: 50px;
+    height: 20px;
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    gap: 15px;
+    margin-bottom: 10px;
+
+}
+
+.comments_container{
+max-width: 1000px;
+}
+
+.green {
+    background-color: green;
+}
