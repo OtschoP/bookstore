@@ -3,7 +3,8 @@
 let bookList = document.getElementById('booklist');
 
 function init() {
-    renderAll()
+    renderAll();
+    saveLikes();
 }
 
 function renderAll() {
@@ -41,3 +42,4 @@ function toggleLike(index) {
 
     renderAll();  
 }
+
