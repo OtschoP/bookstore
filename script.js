@@ -5,6 +5,7 @@ let bookList = document.getElementById('booklist');
 function init() {
     renderAll();
     saveLikes();
+    //saveCommentsName();
 }
 
 function renderAll() {
@@ -26,6 +27,7 @@ function addComment(index) {
         commentsInputRef.value = "";
         commentsNameRef.value = "";
     }
+    
 }
 
 function toggleLike(index) {
@@ -39,7 +41,7 @@ function toggleLike(index) {
         books[index].likes++
         books[index].liked = true;
     }
-
+    saveLikes();
     renderAll();  
 }
 
