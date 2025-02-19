@@ -5,8 +5,11 @@ function saveLikes(){
     })
 }
 
-function saveCommentsName(){
-    books.forEach((book, index) =>{
-        localStorage.setItem(`comments_name_${index}`, JSON.stringify(book.comments.name));
+function saveComments() {
+    books.forEach((book, index) => {
+        let commentsData = book.comments.map(comment => ({
+            name: comment.name, 
+            text: comment.comment
+        }));
     })
 }
