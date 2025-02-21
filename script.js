@@ -30,6 +30,7 @@ function addComment(index) {
         commentsInputRef.value = "";
         commentsNameRef.value = "";
     }
+    saveComments();
     
 }
 

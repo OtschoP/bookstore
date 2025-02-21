@@ -11,5 +11,7 @@ function saveComments() {
             name: comment.name, 
             text: comment.comment
         }));
+        localStorage.setItem(`comments_${index}`, JSON.stringify(commentsData));
     })
+   
 }
