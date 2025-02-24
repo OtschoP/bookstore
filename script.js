@@ -9,6 +9,7 @@ function init() {
     saveLikes();
     saveComments();
     //saveCommentsName();
+    getLikes();
 }
 
 function renderAll() {
