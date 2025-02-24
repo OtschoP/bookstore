@@ -1,29 +1,40 @@
 
 function renderBooklist() {
     bookList.innerHTML = "";
-    books.forEach((book, index) => { bookList.innerHTML += getBooksTemplate(book, index) })
+    for (let index = 0; index < books.length; index++) {
+        let currentBook = books[index];
+
+        bookList.innerHTML += getBooksTemplate(currentBook, index);
+    }
 }
 
 function renderComments() {
-    books.forEach((book, index) => {
-        let commentsRef = document.getElementById(`comments_container_${index}`);
+    for (let bookIndex = 0; bookIndex < books.length; bookIndex++) {
+        let currentBook = books[bookIndex];
+        let commentsRef = document.getElementById(`comments_container_${bookIndex}`);
         commentsRef.innerHTML = "";
+
         if (commentsRef) {
-            
-            book.comments.forEach(comment => {
+            for (let commentIndex = 0; commentIndex < currentBook.comments.length; commentIndex++) {
+                let comment =currentBook.comments[commentIndex];
                 commentsRef.innerHTML += getCommentsTemplate(comment);
-            });
+
+            }
+
         }
-    });
+    }
+
 }
 
 
 function renderLikes() {
-    books.forEach((book, index) => {
-    let likesRef = document.getElementById(`likes_${index}`);
-    likesRef.innerHTML = "";
-    likesRef.innerText = book.likes;
-    })
+    for (let index = 0; index < books.length; index++) {
+        let currentBook = books[index];
+        let likesRef = document.getElementById(`likes_${index}`);
+            likesRef.innerHTML = "";
+            likesRef.innerText = currentBook.likes;
+        
+    }
 }
 
 

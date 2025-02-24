@@ -6,10 +6,9 @@ let bookList = document.getElementById('booklist');
 
 function init() {
     renderAll();
-    saveLikes();
-    saveComments();
-    //saveCommentsName();
     getLikes();
+    saveComments();
+    
 }
 
 function renderAll() {
@@ -47,6 +46,7 @@ function toggleLike(index) {
         books[index].liked = true;
     }
     saveLikes();
-    renderAll();  
+    getLikes();
+    //renderAll();  
 }
 

@@ -1,14 +1,5 @@
 
 function getBooksTemplate(book, index){
-    let buttonCLass = "";
-
-    if (book.liked == true){
-        buttonCLass = "green";
-    }
-    else {
-        buttonClass = "";
-    }
-
 
     return`
     <div class="book">
@@ -18,7 +9,7 @@ function getBooksTemplate(book, index){
     <p><b>Autor:</b> ${book.author}</p>
     <div class="like_container">
         <p id="likes_${index}"><b>Likes: </b>${book.likes}</p>
-        <button id="like_button_${index}" class="${buttonCLass} like_button_class" onclick="toggleLike(${index})">like</button>
+        <button id="like_button_${index}" class="like_button_class" onclick="toggleLike(${index})">like</button>
     </div>
     <p><b>Preis: </b>${book.price} €</p>
     <p><b>Veröffentlicht: </b>${book.publishedYear}</p>
