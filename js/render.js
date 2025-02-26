@@ -16,7 +16,7 @@ function renderComments() {
 
         if (commentsRef) {
             for (let commentIndex = 0; commentIndex < currentBook.comments.length; commentIndex++) {
-                let comment =currentBook.comments[commentIndex];
+                let comment = currentBook.comments[commentIndex];
                 commentsRef.innerHTML += getCommentsTemplate(comment);
 
             }
@@ -27,15 +27,19 @@ function renderComments() {
 }
 
 
-function renderLikes() {
-    for (let index = 0; index < books.length; index++) {
-        let currentBook = books[index];
-        let likesRef = document.getElementById(`likes_${index}`);
-            likesRef.innerHTML = "";
-            likesRef.innerText = currentBook.likes;
-        
+function renderLikes(index) {
+    let likesElement = document.getElementById(`likes_${index}`);
+    if (likesElement) {
+        likesElement.innerHTML = getLikesTemplate(index);   
+    }
+    let likeButton = document.getElementById(`like_button_${index}`);
+    if (likeButton) {
+        if (books[index].liked) {
+            likeButton.classList.add("green"); // Falls liked = true, grüne Klasse hinzufügen
+        } else {
+            likeButton.classList.remove("green"); // Falls liked = false, grüne Klasse entfernen
+        }
     }
 }
-
 
 

@@ -35,4 +35,11 @@ function getBooksTemplate(book, index){
         `
     };
 
+    function getLikesTemplate(index){
+        return `
+        <b>Likes: </b>${books[index].likes}`
+
+    }
+
+
     

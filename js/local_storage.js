@@ -24,18 +24,7 @@ function getLikes() {
             books[index].liked = false;
         }
 
-        let likesElement = document.getElementById(`likes_${index}`);
-        if (likesElement) {
-            likesElement.innerHTML = `<b>Likes: </b>${books[index].likes}`;
-        }
-        let likeButton = document.getElementById(`like_button_${index}`);
-        if (likeButton) {
-            if (books[index].liked) {
-                likeButton.classList.add("green"); // Falls liked = true, grüne Klasse hinzufügen
-            } else {
-                likeButton.classList.remove("green"); // Falls liked = false, grüne Klasse entfernen
-            }
-        }
+        renderLikes(index);
 
     }
 }

@@ -14,7 +14,7 @@ function init() {
 function renderAll() {
     renderBooklist();
     renderComments();
-    renderLikes();
+    //renderLikes();
 }
 
 function addComment(index) {
