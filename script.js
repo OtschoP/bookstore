@@ -6,15 +6,14 @@ let bookList = document.getElementById('booklist');
 
 function init() {
     renderAll();
-    getLikes();
     saveComments();
     
 }
 
 function renderAll() {
     renderBooklist();
-    renderComments();
-    //renderLikes();
+    getLikes();
+    getComments();
 }
 
 function addComment(index) {
@@ -31,6 +30,7 @@ function addComment(index) {
         commentsNameRef.value = "";
     }
     saveComments();
+    getComments();
     
 }
 

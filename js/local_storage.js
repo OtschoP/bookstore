@@ -42,3 +42,17 @@ function saveComments() {
         
     }
 }
+
+function getComments(){
+    for (let index = 0; index < books.length; index++) {
+        let storedComments = JSON.parse(localStorage.getItem(`comments_${index}`));
+
+        if (storedComments !== null) {
+            books[index].comments = storedComments;
+        }
+        else {
+            books[index].comments = []; // Falls keine Kommentare gespeichert sind
+        }
+        renderComments(index);
+    }
+}

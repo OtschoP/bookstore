@@ -10,6 +10,7 @@ function getBooksTemplate(book, index){
     <div class="like_container">
         <p id="likes_${index}"><b>Likes: </b>${book.likes}</p>
         <button id="like_button_${index}" class="like_button_class" onclick="toggleLike(${index})">like</button>
+        <img id="heart_black" src="./img/heart_black.png" alt="">
     </div>
     <p><b>Preis: </b>${book.price} €</p>
     <p><b>Veröffentlicht: </b>${book.publishedYear}</p>
