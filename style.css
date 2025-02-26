@@ -77,6 +77,10 @@ max-width: 1000px;
     background-color: green;
 }
 
-#heart_black {
-    height: 5px;
+.heart_black {
+    height: 50px;
+}
+
+.heart_red {
+    height: 50px;
 }

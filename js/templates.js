@@ -10,7 +10,7 @@ function getBooksTemplate(book, index){
     <div class="like_container">
         <p id="likes_${index}"><b>Likes: </b>${book.likes}</p>
         <button id="like_button_${index}" class="like_button_class" onclick="toggleLike(${index})">like</button>
-        <img id="heart_black" src="./img/heart_black.png" alt="">
+        <div id="heart_${index}"></div>
     </div>
     <p><b>Preis: </b>${book.price} €</p>
     <p><b>Veröffentlicht: </b>${book.publishedYear}</p>
@@ -42,5 +42,10 @@ function getBooksTemplate(book, index){
 
     }
 
-
+    function heartBlackTemplate(index) {
+       return  `<img class="heart_black" src="./img/heart_black.png" onclick="toggleLike(${index})" alt=""></img>`
+    }
     
+    function heartRedTemplate(index) {
+        return `<img class="heart_red" src="./img/heart_red.png" onclick="toggleLike(${index})" alt=""></img>`
+    }

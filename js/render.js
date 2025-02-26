@@ -40,6 +40,15 @@ function renderLikes(index) {
             likeButton.classList.remove("green"); // Falls liked = false, grüne Klasse entfernen
         }
     }
+    let likeHeart = document.getElementById(`heart_${index}`);
+    if (likeHeart) {
+        if (books[index].liked) {
+            likeHeart.innerHTML = heartRedTemplate(index);
+        }
+        else {
+            likeHeart.innerHTML = heartBlackTemplate(index);
+        }
+    }
 }
 
 
