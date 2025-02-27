@@ -79,8 +79,24 @@ max-width: 1000px;
 
 .heart_black {
     height: 50px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+}
+
+.heart_black:hover {
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 100px;
 }
 
 .heart_red {
     height: 50px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+}
+
+.heart_red:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 100px;
 }
