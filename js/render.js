@@ -32,14 +32,14 @@ function renderLikes(index) {
     if (likesElement) {
         likesElement.innerHTML = getLikesTemplate(index);   
     }
-    let likeButton = document.getElementById(`like_button_${index}`);
-    if (likeButton) {
-        if (books[index].liked) {
-            likeButton.classList.add("green"); // Falls liked = true, grüne Klasse hinzufügen
-        } else {
-            likeButton.classList.remove("green"); // Falls liked = false, grüne Klasse entfernen
-        }
-    }
+    //let likeButton = document.getElementById(`like_button_${index}`);
+    //if (likeButton) {
+    //    if (books[index].liked) {
+    //        likeButton.classList.add("green"); // Falls liked = true, grüne Klasse hinzufügen
+    //    } else {
+    //        likeButton.classList.remove("green"); // Falls liked = false, grüne Klasse entfernen
+    //    }
+    //}
     let likeHeart = document.getElementById(`heart_${index}`);
     if (likeHeart) {
         if (books[index].liked) {
