@@ -5,14 +5,19 @@ let bookList = document.getElementById('booklist');
 
 
 function init() {
+   
     renderAll();
-    saveComments();
     
 }
 
 function renderAll() {
-    renderBooklist();
-    getLikes();
+    renderBooklist();      
+    renderLikes();
+    
+    getLikes(); 
+              
+    renderComments();
+      
     getComments();
 }
 

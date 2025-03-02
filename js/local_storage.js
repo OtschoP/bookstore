@@ -12,7 +12,7 @@ function saveLikes() {
     }
 }
 
-function getLikes() {
+function getLikes(index) {
     for (let index = 0; index < books.length; index++) {
         let storedLikes = JSON.parse(localStorage.getItem(`likes_${index}`));
         
@@ -20,8 +20,7 @@ function getLikes() {
             books[index].likes = storedLikes.likes;
             books[index].liked = storedLikes.liked; 
         } else {
-            books[index].likes = 0;
-            books[index].liked = false;
+            
         }
 
         renderLikes(index);
@@ -51,7 +50,7 @@ function getComments(){
             books[index].comments = storedComments;
         }
         else {
-            books[index].comments = []; // Falls keine Kommentare gespeichert sind
+            
         }
         renderComments(index);
     }

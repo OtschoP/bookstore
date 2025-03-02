@@ -30,8 +30,13 @@ function renderComments() {
 function renderLikes(index) {
     let likesElement = document.getElementById(`likes_${index}`);
     if (likesElement) {
-        likesElement.innerHTML = getLikesTemplate(index);   
+        likesElement.innerHTML = getLikesTemplate(index);
+        
     }
+    
+        //saveLikes(index);
+    
+   
     //let likeButton = document.getElementById(`like_button_${index}`);
     //if (likeButton) {
     //    if (books[index].liked) {

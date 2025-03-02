@@ -37,10 +37,13 @@ function getBooksTemplate(book, index){
     };
 
     function getLikesTemplate(index){
-        return `
-        <b>Likes: </b>${books[index].likes}`
-
+        if (!books[index]) {
+            console.error(`Fehler: books[${index}] ist undefined!`);
+            return `<b>Likes: </b>Fehler`;
+        }
+        return `<b>Likes: </b>${books[index].likes}`;
     }
+    
 
     function heartBlackTemplate(index) {
        return  `<img class="heart_black" src="./img/heart_black.png" onclick="toggleLike(${index})" alt=""></img>`
