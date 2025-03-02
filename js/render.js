@@ -18,33 +18,17 @@ function renderComments() {
             for (let commentIndex = 0; commentIndex < currentBook.comments.length; commentIndex++) {
                 let comment = currentBook.comments[commentIndex];
                 commentsRef.innerHTML += getCommentsTemplate(comment);
-
             }
-
         }
     }
-
 }
-
 
 function renderLikes(index) {
     let likesElement = document.getElementById(`likes_${index}`);
     if (likesElement) {
-        likesElement.innerHTML = getLikesTemplate(index);
-        
+        likesElement.innerHTML = getLikesTemplate(index);        
     }
-    
-        //saveLikes(index);
-    
-   
-    //let likeButton = document.getElementById(`like_button_${index}`);
-    //if (likeButton) {
-    //    if (books[index].liked) {
-    //        likeButton.classList.add("green"); // Falls liked = true, grüne Klasse hinzufügen
-    //    } else {
-    //        likeButton.classList.remove("green"); // Falls liked = false, grüne Klasse entfernen
-    //    }
-    //}
+
     let likeHeart = document.getElementById(`heart_${index}`);
     if (likeHeart) {
         if (books[index].liked) {

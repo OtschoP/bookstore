@@ -5,6 +5,9 @@ body {
 
 }
 
+p {
+    padding-right: 5px;
+}
 .banner {
     height:100px;
     width: 100%;

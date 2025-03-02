@@ -1,7 +1,7 @@
 
-function getBooksTemplate(book, index){
+function getBooksTemplate(book, index) {
 
-    return`
+    return `
     <div class="book">
     <img class="banner" src="./img/bookstore_background.jpg">
     <div class="margin-left">
@@ -9,7 +9,7 @@ function getBooksTemplate(book, index){
     <p><b>Autor:</b> ${book.author}</p>
     <div class="like_container">
         <p id="likes_${index}"><b>Likes: </b>${book.likes}</p>
-       <!-- <button id="like_button_${index}" class="like_button_class" onclick="toggleLike(${index})">like</button>-->
+        <!-- <button id="like_button_${index}" class="like_button_class" onclick="toggleLike(${index})">like</button>-->
         <div id="heart_${index}"></div>
     </div>
     <p><b>Preis: </b>${book.price} €</p>
@@ -29,26 +29,22 @@ function getBooksTemplate(book, index){
     </div>
     `};
 
-    function getCommentsTemplate(comment){
-        return `
+function getCommentsTemplate(comment) {
+    return `
         <p><b>Name:</b> ${comment.name}</p>
         <p><b>Kommentar:</b> ${comment.comment}</p>
         `
-    };
+};
 
-    function getLikesTemplate(index){
-        if (!books[index]) {
-            console.error(`Fehler: books[${index}] ist undefined!`);
-            return `<b>Likes: </b>Fehler`;
-        }
-        return `<b>Likes: </b>${books[index].likes}`;
-    }
-    
+function getLikesTemplate(index) {
+    return `<b>Likes: </b>${books[index].likes}`;
+}
 
-    function heartBlackTemplate(index) {
-       return  `<img class="heart_black" src="./img/heart_black.png" onclick="toggleLike(${index})" alt=""></img>`
-    }
-    
-    function heartRedTemplate(index) {
-        return `<img class="heart_red" src="./img/heart_red.png" onclick="toggleLike(${index})" alt=""></img>`
-    }
+
+function heartBlackTemplate(index) {
+    return `<img class="heart_black" src="./img/heart_black.png" onclick="toggleLike(${index})" alt=""></img>`
+}
+
+function heartRedTemplate(index) {
+    return `<img class="heart_red" src="./img/heart_red.png" onclick="toggleLike(${index})" alt=""></img>`
+}

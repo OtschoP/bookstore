@@ -1,23 +1,16 @@
 
-
 let bookList = document.getElementById('booklist');
 
 
-
 function init() {
-   
     renderAll();
-    
 }
 
 function renderAll() {
-    renderBooklist();      
+    renderBooklist();
     renderLikes();
-    
-    getLikes(); 
-              
+    getLikes();
     renderComments();
-      
     getComments();
 }
 
@@ -25,6 +18,7 @@ function addComment(index) {
 
     let commentsInputRef = document.getElementById(`comment_input_${index}`);
     let commentsNameRef = document.getElementById(`commentName_input_${index}`)
+
     if (commentsInputRef.value == "" || commentsNameRef.value == "") {
         alert('bitte beide Felder ausfüllen');
     }
@@ -36,7 +30,7 @@ function addComment(index) {
     }
     saveComments();
     getComments();
-    
+
 }
 
 function toggleLike(index) {
@@ -51,7 +45,6 @@ function toggleLike(index) {
         books[index].liked = true;
     }
     saveLikes();
-    getLikes();
-    //renderAll();  
+    getLikes();  
 }
 
