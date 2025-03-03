@@ -17,7 +17,8 @@ function getBooksTemplate(book, index) {
     <p><b>Genre: </b>${book.genre}</p>
     <h3>Kommentare</h3>
     <div class="input_container">
-        <input id="comment_input_${index}"  placeholder="Kommentar"></input><input id="commentName_input_${index}"  placeholder="Dein Name"></input>
+        <input id="commentName_input_${index}"  placeholder="Dein Name" maxlength="20"></input>
+        <textarea id="comment_input_${index}"  placeholder="Kommentar" maxlength="200"></textarea>
         <button onclick="addComment(${index})">kommentieren</button>
     </div>
     <div class="comments_container">
