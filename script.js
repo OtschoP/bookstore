@@ -24,7 +24,6 @@ function addComment(index) {
     }
     else {
         books[index].comments.push({ name: commentsNameRef.value, comment: commentsInputRef.value });
-        renderComments();
         commentsInputRef.value = "";
         commentsNameRef.value = "";
     }
