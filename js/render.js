@@ -1,6 +1,7 @@
 
 function renderBooklist() {
     bookList.innerHTML = "";
+
     for (let index = 0; index < books.length; index++) {
         let currentBook = books[index];
 
@@ -26,7 +27,7 @@ function renderComments() {
 function renderLikes(index) {
     let likesElement = document.getElementById(`likes_${index}`);
     if (likesElement) {
-        likesElement.innerHTML = getLikesTemplate(index);        
+        likesElement.innerHTML = getLikesTemplate(index);
     }
 
     let likeHeart = document.getElementById(`heart_${index}`);

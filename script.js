@@ -44,6 +44,6 @@ function toggleLike(index) {
         books[index].liked = true;
     }
     saveLikes();
-    getLikes();  
+    getLikes();
 }
 
